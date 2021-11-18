@@ -128,6 +128,11 @@ ul {
 }
 
 .header-cont-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--primery-text-color);
 }
 
@@ -136,18 +141,23 @@ ul {
   color: var(--accent-text-clor);
 }
 
-.header-cont-link-icon::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: teal;
-  background-image: url(../images/envelope.svg);
+.header-cont-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
+/* .header-cont-link:hover .header-cont-icon,
+.header-cont-link:focus .header-cont-icon {
+  fill: var(--accent-text-clor);
+} */
 
 /* .......................Hero........................... */
 
 .hero {
-  background-color: var(--background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/Hero-Bgrd.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -199,9 +209,23 @@ ul {
 .qualities-item {
   width: 270px;
 }
-
 .qualities-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.qualities-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+}
+.qualities-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .qualities-second-title {
